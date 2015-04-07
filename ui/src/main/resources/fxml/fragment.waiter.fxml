@@ -1,0 +1,23 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:id="pnlWait" opacity="0.0" style="-fx-background-color: rgba(0,0,0,0.5);" visible="false" fx:controller="org.pcsoft.tools.scm_fx.ui.fragment.WaiterFragment">
+    <center>
+        <VBox maxHeight="175.0" maxWidth="175.0" BorderPane.alignment="CENTER">
+            <children>
+                <ProgressIndicator fx:id="pbWait" prefHeight="150.0" prefWidth="150.0">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </ProgressIndicator>
+                <Label fx:id="lblWait" alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-text-fill: white;" text="Update Log...">
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

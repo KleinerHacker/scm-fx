@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+    <target
+            path="C:/Workspaces/test">
+        <property
+                name="svn:ignore">test-file
+        </property>
+    </target>
+</properties>

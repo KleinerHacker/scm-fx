@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="org.pcsoft.tools.scm_fx.ui.fragment.statistic.FileStatisticFragment">
+    <children>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Repository History">
+                    <VBox>
+                        <children>
+                            <StackedBarChart fx:id="crtFileCommit" title="File / Directory Commit">
+                                <xAxis>
+                                    <CategoryAxis label="Revision Number" side="BOTTOM"/>
+                                </xAxis>
+                                <yAxis>
+                                    <NumberAxis label="Count of file / directory" minorTickCount="10" side="LEFT"/>
+                                </yAxis>
+                                <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                                </VBox.margin>
+                            </StackedBarChart>
+                            <LineChart fx:id="crtFileGrowing" title="File / Directory Growing">
+                                <xAxis>
+                                    <CategoryAxis label="Revision Number" side="BOTTOM"/>
+                                </xAxis>
+                                <yAxis>
+                                    <NumberAxis label="Count of file / directory" side="LEFT"/>
+                                </yAxis>
+                                <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                                </VBox.margin>
+                            </LineChart>
+                        </children>
+                    </VBox>
+                </Tab>
+                <Tab text="Working Copy State">
+                    <PieChart fx:id="crtFileState" title="File State in Working Copy" labelsVisible="false">
+                        <GridPane.margin>
+                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                        </GridPane.margin>
+                    </PieChart>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <fx:include fx:id="waiter" source="fragment.waiter.fxml"/>
+    </children>
+</StackPane>

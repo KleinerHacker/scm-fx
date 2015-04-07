@@ -1,0 +1,7 @@
+M .hgignore
+C app\pom.xml
+R app\src\main\java\org\pcsoft\tools\scm_fx\app\Runner.java
+A app\src\main\resources\log4j.xml
+C bundle\pom.xml
+I bundle\src\main\resources\icon.ico
+C bundle\src\main\resources\splash.bmp

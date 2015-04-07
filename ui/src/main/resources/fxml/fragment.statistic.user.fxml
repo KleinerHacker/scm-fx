@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.layout.GridPane?>
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pcsoft.tools.scm_fx.ui.fragment.statistic.UserStatisticFragment">
+    <children>
+        <GridPane>
+            <children>
+                <StackedBarChart fx:id="crtUserActivity" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" title="User activity" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                    <xAxis>
+                        <CategoryAxis label="Users" side="BOTTOM" tickLabelRotation="-30.0" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Count of committed files / directories" side="LEFT" />
+                    </yAxis>
+                    <GridPane.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </GridPane.margin>
+                </StackedBarChart>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+        <fx:include fx:id="waiter" source="fragment.waiter.fxml" />
+    </children>
+</StackPane>

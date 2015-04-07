@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<log>
+    <logentry revision="19" node="bd75ceb8869ca97035c0c6180a304fe971cdf1b6">
+        <tag>tip</tag>
+        <author email="user@mail.de">User</author>
+        <date>2014-10-13T13:25:08+02:00</date>
+        <msg xml:space="preserve">update</msg>
+        <paths>
+            <path action="A">plugin/scm-system/impl/git/src/main/resources/ic_git.png</path>
+            <path action="M">plugin/scm-system/impl/hg/src/main/java/org/pcsoft/tools/scm_fx/plugin/scm_system/impl/hg/resolver/AdditionalLogInfo.java</path>
+        </paths>
+    </logentry>
+</log>

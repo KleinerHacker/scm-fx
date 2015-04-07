@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="org.pcsoft.tools.scm_fx.ui.dialog.settings.SettingsDialogController">
+  <tabs>
+    <Tab text="Overview"/>
+    <Tab text="View" />
+      <Tab text="SCM Systems">
+         <content>
+            <TabPane fx:id="tabPaneSCM" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Overview" />
+              </tabs>
+            </TabPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

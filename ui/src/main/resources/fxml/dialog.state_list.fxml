@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pcsoft.tools.scm_fx.ui.dialog.state_list.StateListDialogController">
+   <children>
+      <fx:include fx:id="stateList" source="fragment.state_list.fxml"/>
+      <fx:include fx:id="waiter" source="fragment.waiter.fxml" />
+   </children>
+</StackPane>

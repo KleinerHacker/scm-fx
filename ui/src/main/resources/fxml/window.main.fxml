@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0"
+            prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.pcsoft.tools.scm_fx.ui.window.main.MainWindowController">
+    <bottom>
+        <fx:include source="window/main/statusbar.fxml" BorderPane.alignment="CENTER" fx:id="statusbar"/>
+    </bottom>
+    <top>
+        <fx:include source="window/main/menu.fxml" BorderPane.alignment="CENTER" fx:id="menu"/>
+    </top>
+    <center>
+        <fx:include source="window/main/content.fxml" BorderPane.alignment="CENTER" fx:id="content"/>
+    </center>
+</BorderPane>

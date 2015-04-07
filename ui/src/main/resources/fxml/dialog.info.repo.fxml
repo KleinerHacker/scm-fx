@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0"
+           prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="org.pcsoft.tools.scm_fx.ui.dialog.info.repo.RepositoryInformationDialogController">
+    <BorderPane>
+        <top>
+            <HBox spacing="5.0">
+                <children>
+                    <Label text="SCM System: " BorderPane.alignment="TOP_LEFT">
+                        <font>
+                            <Font name="System Bold" size="14.0"/>
+                        </font>
+                    </Label>
+                    <Label fx:id="lblScmSystem" text="XXX">
+                        <font>
+                            <Font name="System Bold" size="14.0"/>
+                        </font>
+                    </Label>
+                </children>
+                <BorderPane.margin>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </BorderPane.margin>
+            </HBox>
+        </top>
+        <center>
+            <TreeTableView fx:id="tblRepoInfo" BorderPane.alignment="CENTER" showRoot="false">
+                <columns>
+                    <TreeTableColumn fx:id="tbcRepoInfoGroup" editable="false" prefWidth="150.0" text="Group"/>
+                    <TreeTableColumn fx:id="tbcRepoInfoTitle" editable="false" prefWidth="150.0" text="Title"/>
+                    <TreeTableColumn fx:id="tbcRepoInfoValue" editable="false" prefWidth="300.0" text="Value"/>
+                </columns>
+                <BorderPane.margin>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </BorderPane.margin>
+            </TreeTableView>
+        </center>
+    </BorderPane>
+    <fx:include source="fragment.waiter.fxml" fx:id="waiter"/>
+</StackPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<status>
+    <target
+            path="mydir">
+        <entry
+                path="file.log">
+            <wc-status
+                    props="none"
+                    item="ignored">
+            </wc-status>
+        </entry>
+        <entry
+                path="text.txt">
+            <wc-status
+                    props="none"
+                    item="normal"
+                    revision="1098">
+            </wc-status>
+        </entry>
+    </target>
+</status>

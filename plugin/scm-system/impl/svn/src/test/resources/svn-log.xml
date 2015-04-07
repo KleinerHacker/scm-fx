@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log>
+    <logentry
+            revision="10366">
+        <author>svn-user</author>
+        <date>2014-09-29T11:13:15.945647Z</date>
+        <paths>
+            <path
+                    kind="file"
+                    action="M">/Folder/file.xml</path>
+            <path
+                    kind="dir"
+                    action="A">/Folder/Dir</path>
+        </paths>
+        <msg>do any</msg>
+    </logentry>
+</log>

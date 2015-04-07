@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="org.pcsoft.tools.scm_fx.ui.dialog.log.LogDialogController">
+    <children>
+        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                    prefHeight="800.0" prefWidth="1280.0">
+            <center>
+                <TableView fx:id="tblLog" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="tbcLogRevision" editable="false" prefWidth="100.0" text="Revision"/>
+                        <TableColumn fx:id="tbcLogDate" editable="false" prefWidth="150.0" text="Date"/>
+                        <TableColumn fx:id="tbcLogMessage" editable="false" prefWidth="800.0" text="Message"/>
+                        <TableColumn fx:id="tbcLogAuthor" editable="false" prefWidth="150.0" text="Author"/>
+                    </columns>
+                </TableView>
+            </center>
+            <bottom>
+                <TableView fx:id="tblChange" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="tbcChangeIcon" editable="false" maxWidth="35.0" minWidth="35.0"
+                                     prefWidth="35.0" resizable="false" sortable="false"/>
+                        <TableColumn fx:id="tbcChangeModification" editable="false" minWidth="-1.0" prefWidth="100.0"
+                                     text="Modification"/>
+                        <TableColumn fx:id="tbcChangeFile" editable="false" prefWidth="1000.0" text="File / Directory"/>
+                    </columns>
+                    <BorderPane.margin>
+                        <Insets top="5.0"/>
+                    </BorderPane.margin>
+                </TableView>
+            </bottom>
+            <top>
+                <TitledPane animated="false" collapsible="false" text="Filter" BorderPane.alignment="CENTER">
+                    <content>
+                        <HBox>
+                            <children>
+                                <VBox>
+                                    <children>
+                                        <Label text="Entry Count:">
+                                            <VBox.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <ChoiceBox fx:id="cmbLogEntryCount" prefWidth="150.0">
+                                            <VBox.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                                            </VBox.margin>
+                                        </ChoiceBox>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                                    </HBox.margin>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </content>
+                    <BorderPane.margin>
+                        <Insets bottom="5.0"/>
+                    </BorderPane.margin>
+                </TitledPane>
+            </top>
+        </BorderPane>
+        <fx:include source="fragment.waiter.fxml" fx:id="waiter"/>
+    </children>
+</StackPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+    <entry
+            kind="dir"
+            path="."
+            revision="11272">
+        <url>svn+ssh://svn-server.de/svn/trunk</url>
+        <repository>
+            <root>svn+ssh://svn-server.de/svn</root>
+            <uuid>2053a05e-ab04-11e1-bbef-8bdf98f6ab73</uuid>
+        </repository>
+        <wc-info>
+            <wcroot-abspath>C:/Workspace/app</wcroot-abspath>
+            <schedule>normal</schedule>
+            <depth>infinity</depth>
+        </wc-info>
+        <commit
+                revision="11171">
+            <author>svn-user</author>
+            <date>2014-10-22T13:51:29.555982Z</date>
+        </commit>
+    </entry>
+</info>

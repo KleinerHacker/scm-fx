@@ -1,0 +1,6 @@
+.hgignore
+app/pom.xml
+app/src/main/java/org/pcsoft/tools/scm_fx/app/Runner.java
+app/src/main/resources/log4j.xml
+bundle/pom.xml
+bundle/src/main/resources/icon.ico

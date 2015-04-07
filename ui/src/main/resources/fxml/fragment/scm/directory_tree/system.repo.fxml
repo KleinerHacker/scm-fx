@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pcsoft.tools.scm_fx.ui.fragment.scm.directory_tree.ScmDirectoryTreeFragmentRepoSystemController">
+    <children>
+      <VBox>
+         <children>
+              <HBox maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                  <children>
+                      <TreeTableView fx:id="tblRepo" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#onMouseClickTreeTable" showRoot="false" HBox.hgrow="ALWAYS">
+                          <columns>
+                              <TreeTableColumn fx:id="tbcRepoFile" minWidth="350.0" onEditCommit="#onEditCommitRepoFile" prefWidth="-1.0" text="File" />
+                              <TreeTableColumn fx:id="tbcRepoDate" editable="false" minWidth="150.0" prefWidth="-1.0" text="Date" />
+                              <TreeTableColumn fx:id="tbcRepoRevision" editable="false" minWidth="100.0" prefWidth="-1.0" text="Revision" />
+                              <TreeTableColumn fx:id="tbcRepoAuthor" editable="false" minWidth="150.0" prefWidth="-1.0" text="Author" />
+                          </columns>
+                      </TreeTableView>
+                      <ToolBar fx:id="tbRepo" minWidth="40.0" orientation="VERTICAL" prefWidth="40.0">
+                         <items>
+                             <Button onAction="#onActionLog">
+                                 <graphic>
+                                     <ImageView>
+                                         <image>
+                                             <Image url="@../../../../icons/ic_log16.png" />
+                                         </image>
+                                     </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                     <Tooltip text="Show Log" />
+                                 </tooltip>
+                             </Button>
+                             <Button onAction="#onActionStatistic">
+                                 <graphic>
+                                     <ImageView>
+                                         <image>
+                                             <Image url="@../../../../icons/ic_statistic16.png" />
+                                         </image>
+                                     </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                     <Tooltip text="Show Statistic" />
+                                 </tooltip>
+                             </Button>
+                             <Separator />
+                             <Button onAction="#onActionTag">
+                                 <graphic>
+                                     <ImageView>
+                                         <image>
+                                             <Image url="@../../../../icons/ic_tag16.png" />
+                                         </image>
+                                     </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                     <Tooltip text="Show tags" />
+                                 </tooltip>
+                             </Button>
+                             <Button onAction="#onActionBranch">
+                                 <graphic>
+                                     <ImageView>
+                                         <image>
+                                             <Image url="@../../../../icons/ic_branch16.png" />
+                                         </image>
+                                     </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                     <Tooltip text="Show branches" />
+                                 </tooltip>
+                             </Button>
+                             <Separator/>
+                             <Button onAction="#onActionRepoInfo">
+                                 <graphic>
+                                     <ImageView>
+                                         <image>
+                                             <Image url="@../../../../icons/ic_info16.png" />
+                                         </image>
+                                     </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                     <Tooltip text="Show Repository Information" />
+                                 </tooltip>
+                             </Button>
+                         </items>
+                      </ToolBar>
+                  </children>
+              </HBox>
+            <ToolBar prefHeight="40.0">
+               <items>
+                  <ComboBox fx:id="cmbRevision" editable="true" prefWidth="100.0" promptText="Revision" />
+                  <Button mnemonicParsing="false" onAction="#onActionChooseRevision" prefWidth="35.0" text="..." />
+               </items>
+            </ToolBar>
+         </children>
+      </VBox>
+        <Label fx:id="lblNoSourceControl" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-text-fill: red; -fx-background-color: rgba(0, 0, 0, 0.5);" text="No source control" visible="false">
+            <font>
+                <Font name="System Bold" size="48.0" />
+            </font>
+        </Label>
+        <fx:include fx:id="waiter" source="../../../fragment.waiter.fxml" />
+    </children>
+</StackPane>

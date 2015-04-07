@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lists>
+    <list
+            path="test-parent">
+        <entry
+                kind="dir">
+            <name>test-child</name>
+            <commit
+                    revision="10703">
+                <author>svn-user</author>
+                <date>2014-10-09T05:12:51.512549Z</date>
+            </commit>
+        </entry>
+    </list>
+</lists>

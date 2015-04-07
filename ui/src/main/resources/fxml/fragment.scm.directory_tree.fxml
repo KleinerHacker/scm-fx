@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+           xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="org.pcsoft.tools.scm_fx.ui.fragment.scm.directory_tree.ScmDirectoryTreeFragment">
+    <items>
+        <VBox>
+            <Label text="Working Copy" maxWidth="1.7976931348623157E308" alignment="CENTER" style="-fx-font-weight: bold">
+                <VBox.margin>
+                    <Insets left="2" top="2" right="2" bottom="2"/>
+                </VBox.margin>
+            </Label>
+            <fx:include source="fragment/scm/directory_tree/system.file.fxml" fx:id="fileSystem" VBox.vgrow="ALWAYS"/>
+        </VBox>
+        <VBox>
+            <Label text="Repository" maxWidth="1.7976931348623157E308" alignment="CENTER" style="-fx-font-weight: bold">
+                <VBox.margin>
+                    <Insets left="2" top="2" right="2" bottom="2"/>
+                </VBox.margin>
+            </Label>
+            <fx:include source="fragment/scm/directory_tree/system.repo.fxml" fx:id="repoSystem" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </items>
+</SplitPane>

@@ -1,0 +1,24 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" minHeight="-Infinity" minWidth="-Infinity" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" fx:controller="org.pcsoft.tools.scm_fx.ui.fragment.state_list.StateListFragment">
+    <children>
+        <CheckBox fx:id="ckbListSelectAll" text="Select / Unselect _all">
+            <VBox.margin>
+                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </VBox.margin>
+        </CheckBox>
+        <TableView fx:id="tblList" editable="true" maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="tbcCommitCheck" prefWidth="25.0" sortable="false" />
+                <TableColumn fx:id="tbcCommitFile" editable="false" prefWidth="1000.0" text="File / Directory" />
+                <TableColumn fx:id="tbcCommitState" editable="false" prefWidth="100.0" text="State" />
+            </columns>
+            <VBox.margin>
+                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </VBox.margin>
+        </TableView>
+    </children>
+</VBox>

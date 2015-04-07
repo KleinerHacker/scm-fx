@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.Separator?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pcsoft.tools.scm_fx.ui.window.main.MainWindowMenuController">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu text="_File">
+                    <items>
+                        <MenuItem onAction="#onActionOpen" text="_Open...">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@../../../icons/ic_open16.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </MenuItem>
+                        <Menu fx:id="mnuReopen" text="_Reopen" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem onAction="#onActionExit" text="_Exit" />
+                    </items>
+                </Menu>
+                <Menu text="_View">
+                    <MenuItem text="_Fullscreen" onAction="#onActionFullScreen">
+                        <accelerator>
+                            <KeyCodeCombination alt="DOWN" code="F11" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                        </accelerator>
+                    </MenuItem>
+                </Menu>
+                <Menu text="E_xtras">
+                    <items>
+                        <MenuItem onAction="#onActionSettings" text="_Settings">
+                            <accelerator>
+                                <KeyCodeCombination alt="DOWN" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@../../../icons/ic_settings16.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </MenuItem>
+                    </items>
+                </Menu>
+                <Menu text="_Help">
+                    <items>
+                        <MenuItem onAction="#onActionAbout" text="_About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <ToolBar prefHeight="40.0" prefWidth="200.0">
+            <items>
+                <Button onAction="#onActionOpen">
+                    <graphic>
+                        <ImageView>
+                            <image>
+                                <Image url="@../../../icons/ic_open16.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Open" />
+                    </tooltip>
+                </Button>
+                <Separator />
+                <Button onAction="#onActionSettings">
+                    <graphic>
+                        <ImageView>
+                            <image>
+                                <Image url="@../../../icons/ic_settings16.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Settings" />
+                    </tooltip>
+                </Button>
+            </items>
+        </ToolBar>
+    </children>
+</VBox>

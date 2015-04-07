@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pcsoft.tools.scm_fx.ui.dialog.commit.CommitDialogController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0">
+         <children>
+            <Label text="Message:">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Label>
+            <TextArea fx:id="txtMessage" prefHeight="75.0" promptText="Please enter a message">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </TextArea>
+            <fx:include fx:id="stateList" source="fragment.state_list.fxml"/>
+         </children>
+      </VBox>
+      <fx:include fx:id="waiter" source="fragment.waiter.fxml" />
+   </children>
+</StackPane>
