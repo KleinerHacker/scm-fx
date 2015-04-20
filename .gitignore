@@ -1,3 +1,5 @@
 .idea
 **/target/
 *.iml
+scm-fx.log
+scm-fx-cmd.log
